@@ -1,3 +1,5 @@
+// Problem Link : https://www.acmicpc.net/problem/1002
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -16,15 +18,15 @@ public class test_1002 {
 			p = new int[6];
 			for(int j = 0 ; j < 6 ; j++) p[j] = Integer.parseInt(st.nextToken());
 
-			rsum_2 = (int)Math.pow(p[2] + p[5], 2); // (°è»ê°Å¸®ÀÇ ÇÕ)^2
-			rdiff_2 = (int)Math.pow(p[2] - p[5], 2); // (°è»ê°Å¸®ÀÇ Â÷)^2
-			d_2 = (int)(Math.pow(p[0] - p[3], 2) + Math.pow(p[1] - p[4], 2)); // (µÎ ÅÍ·¿°£ °Å¸®)^2
+			rsum_2 = (int)Math.pow(p[2] + p[5], 2); // (ê³„ì‚°ê±°ë¦¬ì˜ í•©)^2
+			rdiff_2 = (int)Math.pow(p[2] - p[5], 2); // (ê³„ì‚°ê±°ë¦¬ì˜ ì°¨)^2
+			d_2 = (int)(Math.pow(p[0] - p[3], 2) + Math.pow(p[1] - p[4], 2)); // (ë‘ í„°ë ›ê°„ ê±°ë¦¬)^2
 			
-			// ÅÍ·¿ ±âÁØ¿¡¼­ ¹ÝÁö¸§ÀÌ rÀÎ ¿ø ±×¸®±â
-			if(p[0] == p[3] && p[1] == p[4] && p[2] == p[5]) sb.append("-1").append('\n'); // µÎ ¿øÀÌ ¿ÏÀü°ãÄ£ °æ¿ì = Á¢Á¡ ¹«ÇÑ´ë
-			else if(d_2 == rdiff_2 || d_2 == rsum_2) sb.append("1").append('\n'); // µÎ ¿øÀÌ ¼­·Î Á¢ÇØÀÖ°Å³ª ÇÑ ¿øÀÌ ´Ù¸¥ ¿ø ¾È¿¡¼­ Á¢ÇÑ °æ¿ì = Á¢Á¡ 1°³
-			else if(d_2 > rdiff_2 && d_2 < rsum_2) sb.append("2").append('\n'); // µÎ ¿øÀÇ  ÀÏºÎ¸¸ °ãÄ£ °æ¿ì = Á¢Á¡ 2°³
-			else sb.append("0").append('\n'); // µÎ ¿øÀÌ ¸¸³ªÁö ¾Ê´Â °æ¿ì = Á¢Á¡ ¾øÀ½
+			// í„°ë › ê¸°ì¤€ì—ì„œ ë°˜ì§€ë¦„ì´ rì¸ ì› ê·¸ë¦¬ê¸°
+			if(p[0] == p[3] && p[1] == p[4] && p[2] == p[5]) sb.append("-1").append('\n'); // ë‘ ì›ì´ ì™„ì „ê²¹ì¹œ ê²½ìš° = ì ‘ì  ë¬´í•œëŒ€
+			else if(d_2 == rdiff_2 || d_2 == rsum_2) sb.append("1").append('\n'); // ë‘ ì›ì´ ì„œë¡œ ì ‘í•´ìžˆê±°ë‚˜ í•œ ì›ì´ ë‹¤ë¥¸ ì› ì•ˆì—ì„œ ì ‘í•œ ê²½ìš° = ì ‘ì  1ê°œ
+			else if(d_2 > rdiff_2 && d_2 < rsum_2) sb.append("2").append('\n'); // ë‘ ì›ì˜  ì¼ë¶€ë§Œ ê²¹ì¹œ ê²½ìš° = ì ‘ì  2ê°œ
+			else sb.append("0").append('\n'); // ë‘ ì›ì´ ë§Œë‚˜ì§€ ì•ŠëŠ” ê²½ìš° = ì ‘ì  ì—†ìŒ
 		}
 		System.out.print(sb.toString());
 	}
