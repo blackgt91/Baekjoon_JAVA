@@ -15,15 +15,15 @@ public class test_1138 {
 		int i, seat, High; 
 		for(i = 1 ; i <= N ; i++) left_High[i] = Integer.parseInt(st.nextToken()); // Input
 		
-		row[left_High[1]] = 1; // Å° ÀÛÀº »ç¶÷ºÎÅÍ ¹èÄ¡
+		row[left_High[1]] = 1; // í‚¤ ì‘ì€ ì‚¬ëŒë¶€í„° ë°°ì¹˜
 		for(i = 2 ; i <= N ; i++) {
 			seat = 0;
 			High = 0;
-			while(High != left_High[i]) { // High : ¿ŞÂÊ ÀÚ¸®¿¡ Å° Å« »ç¶÷ ÀÎ¿ø Å½»ö == ¾ÆÁ÷ ¹èÄ¡¾ÈµÈ ÀÚ¸®(=ÃÊ±âÈ­°ª) Ã£±â
+			while(High != left_High[i]) { // High : ì™¼ìª½ ìë¦¬ì— í‚¤ í° ì‚¬ëŒ ì¸ì› íƒìƒ‰ => ì•„ì§ ë°°ì¹˜ì•ˆëœ ìë¦¬(=ì´ˆê¸°í™”ê°’) ì°¾ê¸°
 				if(row[seat++] == 0) High++; 
 			}
 			if(row[seat] == 0) row[seat] = i; 
-			else { // Å° ÀÛÀº »ç¶÷ÀÌ ÀÚ¸®ÀâÈù °æ¿ì¿¡´Â ¿À¸¥ÂÊ ÀÚ¸®·Î
+			else { // í‚¤ ì‘ì€ ì‚¬ëŒì´ ìë¦¬ì¡íŒ ê²½ìš°ì—ëŠ” ì˜¤ë¥¸ìª½ ìë¦¬ë¡œ
 				while(row[++seat] != 0) {}
 				row[seat] = i;
 			}
