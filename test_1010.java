@@ -1,3 +1,4 @@
+// Problem Link : https://www.acmicpc.net/problem/1010
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -7,12 +8,12 @@ public class test_1010 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int[][] count_Case = new int[30][30];
-		int i,start,end; // Ãâ¹ßÁöÁ¡ ¼ö°¡ µµÂøÁöÁ¡ ¼öº¸´Ù ÀûÀº °ÍÀ¸·Î °¡Á¤
-		for(i = 0 ; i < 30 ; i++) count_Case[0][i] = 1; // Ãâ¹ßÁöÁ¡ÀÌ ¾ø´Â °æ¿ì´Â Á¸ÀçÇÏÁö ¾ÊÁö¸¸ start°¡ 1ÀÎ °æ¿ì¸¦ CountÇÏ±â À§ÇØ 1·Î ÃÊ±âÈ­
+		int i,start,end; // ì¶œë°œì§€ì  ìˆ˜ê°€ ë„ì°©ì§€ì  ìˆ˜ë³´ë‹¤ ì ì€ ê²ƒìœ¼ë¡œ ê°€ì •
+		for(i = 0 ; i < 30 ; i++) count_Case[0][i] = 1; // ì¶œë°œì§€ì ì´ ì—†ëŠ” ê²½ìš°ëŠ” ì¡´ì¬í•˜ì§€ ì•Šì§€ë§Œ startê°€ 1ì¸ ê²½ìš°ë¥¼ Countí•˜ê¸° ìœ„í•´ 1ë¡œ ì´ˆê¸°í™”
 		for(start = 1 ; start < 30 ; start++) {
 			for(end = start ; end < 30 ; end++) {
 				for(i = 0 ; i <= end-start ; i++) {
-					count_Case[start][end] += count_Case[start-1][end-1-i]; // ¸Ç À§ÀÇ Ã¹ Ãâ¹ßÁöÁ¡À» °íÁ¤ÇÏ°í µµÂø°¡´ÉÇÑ ÁöÁ¡À» ÁöÁ¤ÇÏ¸é¼­ µÎ ÁöÁ¡°£ ´Ù¸®¸¦ ³õ¾ÒÀ» ¶§ ´Ù¸®°¡ ¾ø´Â ÁöÁ¡°£ÀÇ °æ¿ìÀÇ ¼ö Count
+					count_Case[start][end] += count_Case[start-1][end-1-i]; // ë§¨ ìœ„ì˜ ì²« ì¶œë°œì§€ì ì„ ê³ ì •í•˜ê³  ë„ì°©ê°€ëŠ¥í•œ ì§€ì ì„ ì§€ì •í•˜ë©´ì„œ ë‘ ì§€ì ê°„ ë‹¤ë¦¬ë¥¼ ë†“ì•˜ì„ ë•Œ ë‹¤ë¦¬ê°€ ì—†ëŠ” ì§€ì ê°„ì˜ ê²½ìš°ì˜ ìˆ˜ Count
 				}
 			}
 		} // Memoization
