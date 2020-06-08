@@ -11,9 +11,9 @@ public class test_1120 {
 		char[] B = st.nextToken().toCharArray();
 		int length_Diff = B.length-A.length; 
 		
-		int diff_Char_Min = 50; // ¹®ÀÚ¿­ ÃÖ´ë ±æÀÌÂ÷ÀÌ
-		int char_Diff; //´Ù¸¥ ¹®ÀÚ¿­ ¼ö °è»ê
-		for(int add = 0 ; add <= length_Diff ; add++) { // ¹®ÀÚ¿­ ¾Õ¿¡ µé¾î°£ ¼ö¿¡ µû¸¥ for¹® (Ãß°¡·Î µé¾î°£ ¹®ÀÚ´Â ¹®ÀÚ¿­ BÀÇ ¹®ÀÚ¿Í µ¿ÀÏ)
+		int diff_Char_Min = 50; // ë¬¸ìì—´ ìµœëŒ€ ê¸¸ì´ì°¨ì´
+		int char_Diff; //ë‹¤ë¥¸ ë¬¸ìì—´ ìˆ˜ ê³„ì‚°
+		for(int add = 0 ; add <= length_Diff ; add++) { // ë¬¸ìì—´ ì•ì— ë“¤ì–´ê°„ ìˆ˜ì— ë”°ë¥¸ forë¬¸ (ì¶”ê°€ë¡œ ë“¤ì–´ê°„ ë¬¸ìëŠ” ë¬¸ìì—´ Bì˜ ë¬¸ìì™€ ë™ì¼)
 			char_Diff = 0;
 			for(int i = 0 ; i < A.length ; i++) {
 				if(A[i] != B[i+add]) char_Diff++;
