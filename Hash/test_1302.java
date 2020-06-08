@@ -18,9 +18,9 @@ public class test_1302 {
 			book_Name = br.readLine();
 			if(hmap.containsKey(book_Name)) hmap.put(book_Name, hmap.get(book_Name)+1);
 			else hmap.put(book_Name, 1);
-		} // Input, StringÀ» key°ªÀ¸·Î ÇÑ HashmapÀ» ÅëÇØ Count
+		} // Input, Stringì„ keyê°’ìœ¼ë¡œ í•œ Hashmapì„ í†µí•´ Count
 		
-		for(String name : hmap.keySet()) { // ÃÖ´ë°ªÀ» °¡Áø key°ªÀ» List¿¡ ÀúÀå, ÃÖ´ë°ª º¯°æ½Ã List ÃÊ±âÈ­
+		for(String name : hmap.keySet()) { // ìµœëŒ€ê°’ì„ ê°€ì§„ keyê°’ì„ Listì— ì €ì¥, ìµœëŒ€ê°’ ë³€ê²½ì‹œ List ì´ˆê¸°í™”
 			cnt = hmap.get(name);
 			if(max_Cnt < cnt) { 
 				max_Cnt = cnt;
@@ -31,7 +31,7 @@ public class test_1302 {
 			else continue;
 		}
 
-		Collections.sort(same_Cnt); // »çÀü¼ø Á¤·Ä
+		Collections.sort(same_Cnt); // ì‚¬ì „ìˆœ ì •ë ¬
 		System.out.print(same_Cnt.get(0));
     }
 }
