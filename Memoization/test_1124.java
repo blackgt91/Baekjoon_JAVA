@@ -6,12 +6,12 @@ import java.util.StringTokenizer;
 public class test_1124 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int[] has_Prime = new int[100001]; // ¼ÒÀÎ¼öºĞÇØ ÇßÀ»¶§ÀÇ ¼Ò¼ö °³¼ö, 1°³ÀÌ¸é ¼Ò¼ö
+		int[] has_Prime = new int[100001]; // ì†Œì¸ìˆ˜ë¶„í•´ í–ˆì„ë•Œì˜ ì†Œìˆ˜ ê°œìˆ˜, 1ê°œì´ë©´ ì†Œìˆ˜
 		int i;
 		
 		for(i = 2 ; i < has_Prime.length ; i++) {
-			if(has_Prime[i] == 0) has_Prime[i]++; // ¼Ò¼öÀÎ °æ¿ì
-			for(int j = 2 ; j*i < has_Prime.length ; j++) has_Prime[j*i] = has_Prime[i]+has_Prime[j]; // °ö¼ÀÀ» ÅëÇØ ¼Ò¼ö °³¼ö Count
+			if(has_Prime[i] == 0) has_Prime[i]++; // ì†Œìˆ˜ì¸ ê²½ìš°
+			for(int j = 2 ; j*i < has_Prime.length ; j++) has_Prime[j*i] = has_Prime[i]+has_Prime[j]; // ê³±ì…ˆì„ í†µí•´ ì†Œìˆ˜ ê°œìˆ˜ Count
 		}
 		// Memoization
 		
@@ -20,7 +20,7 @@ public class test_1124 {
 		int B = Integer.parseInt(st.nextToken());
 		int cnt = 0;
 		for(i = A ; i <= B ; i++) {
-			if(has_Prime[has_Prime[i]]==1) cnt++; // ¼Ò¼ö °³¼ö¸¦ ¼ÒÀÎ¼öºĞÇØ ÇßÀ» ¶§ ¼Ò¼ö°¡ 1°³ÀÎ °æ¿ì
+			if(has_Prime[has_Prime[i]]==1) cnt++; // ì†Œìˆ˜ ê°œìˆ˜ë¥¼ ì†Œì¸ìˆ˜ë¶„í•´ í–ˆì„ ë•Œ ì†Œìˆ˜ê°€ 1ê°œì¸ ê²½ìš°
 		}
 		System.out.print(cnt);
 	}
