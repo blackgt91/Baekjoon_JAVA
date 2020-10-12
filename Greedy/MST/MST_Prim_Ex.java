@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class minimumSpanningTree_Ex {
+public class MST_Prim_Ex {
 	
 	static class Edge { // 간선 객체(시작점, 끝점, 가중치)
 		int start, end, weight;
